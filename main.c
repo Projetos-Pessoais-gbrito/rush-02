@@ -1,26 +1,23 @@
 #include "./headers_profiles/dict_entry.h"
 #include "./headers_profiles/include_libs.h"
 
-int read_and_parse_dict(char *filename, t_dict_entry **dict_entries);
+int process_dictionary(char *filename);
 
-void free_dict_entries(t_dict_entry *dict_entries, int dict_size);
-
-int process_dictionary(char *filename) {
-    t_dict_entry *dict_entries = NULL;
-    int dict_size = read_and_parse_dict(filename, &dict_entries);
-    
-    if (dict_size == -1) {
-        write(1, "Dict Error\n", 11);
-        return 1;
+void receive_inputs(int argc, char *argv[])
+{
+    printf("entrei");
+    while(argv[argc - 1])
+    {
+        printf("%s", argv[argc - 1]);
+        argv[argc - 1]++;
     }
-    
-    // Aqui você pode adicionar mais lógica para processar o dicionário, se necessário
-    
-    free_dict_entries(dict_entries, dict_size);
-    return 0;
 }
 
-int main() {
+int main(int argc, char *argv[]) {
     int result = process_dictionary("numbers.dict");
+    if(argc > 1)
+    {
+        printf("%s", argv[1]);
+    }
     return result;
 }

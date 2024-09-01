@@ -5,10 +5,10 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
 # Nome do executável final
-TARGET = rush_02
+TARGET = rush-02
 
 # Lista de arquivos-fonte
-SRCS = main.c ./services/compare_inputs.c ./services/process_data.c
+SRCS = main.c ./services/compare_inputs.c ./services/process_data.c ./services/process_dictionary.c
 
 # Gerar uma lista de arquivos-objeto correspondentes
 OBJS = $(SRCS:.c=.o)

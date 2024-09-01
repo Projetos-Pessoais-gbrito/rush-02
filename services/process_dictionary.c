@@ -17,5 +17,5 @@ int process_dictionary(char *filename) {
     // Aqui você pode adicionar mais lógica para processar o dicionário, se necessário
     
     free_dict_entries(dict_entries, dict_size);
-    return 0;
+    return (0);
 }
