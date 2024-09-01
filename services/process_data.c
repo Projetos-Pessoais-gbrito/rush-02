@@ -1,5 +1,5 @@
-#include "./headers_profiles/dict_entry.h"
-#include "./headers_profiles/include_libs.h"
+#include "../headers_profiles/dict_entry.h"
+#include "../headers_profiles/include_libs.h"
 
 void compare_inputs(t_dict_entry *entries, int dict_size);
 

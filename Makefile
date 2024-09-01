@@ -8,7 +8,7 @@ CFLAGS = -Wall -Wextra -Werror
 TARGET = rush_02
 
 # Lista de arquivos-fonte
-SRCS = main.c compare_inputs.c process_data.c
+SRCS = main.c ./services/compare_inputs.c ./services/process_data.c
 
 # Gerar uma lista de arquivos-objeto correspondentes
 OBJS = $(SRCS:.c=.o)
